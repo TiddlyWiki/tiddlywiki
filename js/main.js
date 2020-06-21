@@ -90,7 +90,6 @@ function main()
 	store.notifyAll();
 	t8 = new Date();
 	restart();
-	refreshDisplay();
 	t9 = new Date();
 	if(pluginProblem) {
 		story.displayTiddler(null,"PluginManager");

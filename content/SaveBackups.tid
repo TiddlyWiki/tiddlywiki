@@ -1,9 +1,15 @@
 created: 20110211110700000
 creator: psd
-modified: 20110211131000000
-modifier: blaine
+modified: 20200819004900000
+modifier: mkerrigan
 tags: features options
 title: SaveBackups
 type: text/x-tiddlywiki
 
-This is one of the InterfaceOptions you can use to customize TiddlyWiki. It determines whether TiddlyWiki creates a backup file each time you SaveChanges. I'd suggest keeping it switched on for safety!
+The SaveBackups option in the InterfaceOptions determines if the internal backup mechanism will create a backup each time the ~TiddlyWiki is saved.
+
+If no [[saver method|Setting up saving]] is configured, no backup file will be created. Using the manual download saving method will not overwrite the ~TiddlyWiki file in place unless the user chooses the overwrite the existing ~TiddlyWiki file.
+
+Many saver methods have their own way of creating automatic backups. In addition, the operating system or server where the ~TiddlyWiki file is stored may also provide file backup protection.
+
+Note: Do not use File -> Save As or Save Page As from the browser menu to create backups, otherwise this can lead to SaveUnpredictabilities.

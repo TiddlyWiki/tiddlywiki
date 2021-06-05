@@ -155,7 +155,8 @@ String.prototype.parseParams = function(defaultName,defaultValue,allowEval,noNam
 	} while(match);
 	// Summarise parameters into first element
 	var t;
-	for(t=1; t<r.length; t++) {
+	for (t = 1; t < r.length; t++) {
+	    r[t].value = r[t].value.replace(/\>\+\>/mg, '>>');
 		if(r[0][r[t].name])
 			r[0][r[t].name].push(r[t].value);
 		else
@@ -172,7 +173,7 @@ String.prototype.readMacroParams = function(notAllowEval)
 	var p = this.parseParams("list",null,!notAllowEval,true);
 	var t,n = [];
 	for(t=1; t<p.length; t++)
-		n.push(p[t].value);
+	    n.push(p[t].value.replace(/\>\+\>/mg, '>>'));
 	return n;
 };
 
